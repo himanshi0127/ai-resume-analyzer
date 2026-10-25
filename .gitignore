@@ -1,0 +1,10 @@
+.venv312/
+venv/
+__pycache__/
+*.py[cod]
+.env
+uploads/*
+!uploads/.gitkeep
+utils/* copy.py
+
+utils/.gitignore

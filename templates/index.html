@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Analyzer</title>
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>🤖 AI Resume Analyzer</h1>
+        <p>
+            Upload your resume to analyze its content, evaluate your resume
+            score, and discover relevant job opportunities.
+        </p>
+
+        <!-- Resume Upload Form -->
+        <form id="upload-form" enctype="multipart/form-data">
+            <label for="resume"><b>Select your resume (PDF or DOCX):</b></label>
+
+            <input
+                type="file"
+                id="resume"
+                name="resume"
+                accept=".pdf,.docx"
+                required
+            >
+
+            <button type="submit">Analyze Resume</button>
+        </form>
+
+        <div id="error" role="alert"></div>
+
+        <div id="loading" role="status">
+            Analyzing your resume. Please wait...
+        </div>
+
+        <!-- Analysis Results -->
+        <div id="results" style="display:none;">
+
+            <!-- Extracted Information -->
+            <h2>📄 Extracted Information</h2>
+
+            <ul>
+                <li><b>Name:</b> <span id="r-name"></span></li>
+                <li><b>Email:</b> <span id="r-email"></span></li>
+                <li><b>Phone:</b> <span id="r-phone"></span></li>
+                <li><b>Education:</b> <span id="r-education"></span></li>
+                <li><b>Skills:</b> <span id="r-skills"></span></li>
+            </ul>
+
+            <!-- Circular Resume Score -->
+            <h2>📊 Resume Score</h2>
+
+            <div class="score-dashboard">
+                <div class="score-card">
+
+                    <p class="score-label">YOUR RESUME SCORE</p>
+
+                    <div class="score-circle">
+                        <svg viewBox="0 0 160 160" aria-label="Resume score">
+                            <circle
+                                class="score-track"
+                                cx="80"
+                                cy="80"
+                                r="62"
+                            ></circle>
+
+                            <circle
+                                id="score-ring"
+                                class="score-progress"
+                                cx="80"
+                                cy="80"
+                                r="62"
+                            ></circle>
+                        </svg>
+
+                        <div class="score-circle-text">
+                            <span id="r-score">0</span>
+                            <small>OUT OF 100</small>
+                        </div>
+                    </div>
+
+                    <p class="score-caption">
+                        Your resume evaluation
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- Score Breakdown -->
+            <h3>📈 Resume Score Breakdown</h3>
+            <div id="score-breakdown-container"></div>
+
+            <!-- Feedback -->
+            <ul id="r-feedback"></ul>
+
+            <!-- Strengths -->
+            <h3>✅ Resume Strengths</h3>
+            <ul id="r-strengths"></ul>
+
+            <!-- Improvement Recommendations -->
+            <h3>🚀 Resume Improvement Recommendations</h3>
+            <div id="recommendations-container"></div>
+
+            <!-- Recommended Jobs -->
+            <h2>💼 Recommended Jobs</h2>
+            <p>Explore job opportunities based on your resume skills.</p>
+
+            <div id="jobs-container">
+                <div id="jobs-body" class="jobs-grid"></div>
+            </div>
+
+            <!-- Skill Gap Analysis -->
+            <div id="skill-gap-section" style="display:none;">
+
+                <h2>🎯 Skill Gap Analysis</h2>
+
+                <p>
+                    Review these missing skills and use the learning
+                    suggestions to prepare for your target jobs.
+                </p>
+
+                <div id="skill-gap-container"></div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

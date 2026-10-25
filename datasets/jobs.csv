@@ -1,0 +1,11 @@
+job_id,title,company,skills_required,description
+1,Data Analyst,Acme Corp,"python, sql, excel, power bi, statistics","Looking for a Data Analyst skilled in Python, SQL and Power BI to analyze business data and build dashboards."
+2,Machine Learning Engineer,TechNova,"python, machine learning, tensorflow, deep learning, sql","Seeking an ML Engineer with strong Python and TensorFlow skills to build predictive models."
+3,Frontend Developer,PixelWorks,"javascript, react, html, css, git","Frontend Developer needed with React, HTML, CSS and Git experience to build responsive web apps."
+4,Backend Developer,CodeBase Inc,"python, django, flask, sql, rest api","Backend Developer role requiring Flask/Django and REST API development skills."
+5,Data Scientist,InsightAI,"python, machine learning, pandas, numpy, sql, statistics","Data Scientist role focused on statistical modeling, pandas/numpy and machine learning."
+6,DevOps Engineer,CloudNet,"aws, docker, kubernetes, linux, ci/cd","DevOps Engineer with AWS, Docker, Kubernetes and CI/CD pipeline experience."
+7,Full Stack Developer,WebForge,"javascript, react, node.js, mongodb, express","Full Stack Developer skilled in the MERN stack (MongoDB, Express, React, Node.js)."
+8,Business Analyst,BizConsult,"excel, sql, power bi, communication, data analysis","Business Analyst with strong Excel, SQL and communication skills."
+9,Android Developer,AppSphere,"java, kotlin, android studio, xml, git","Android Developer with experience in Kotlin, Java and Android Studio."
+10,Cybersecurity Analyst,SecureNet,"network security, python, linux, siem, cybersecurity","Cybersecurity Analyst role requiring knowledge of network security and SIEM tools."
